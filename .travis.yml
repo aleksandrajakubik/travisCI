@@ -1,0 +1,9 @@
+language: node_js
+
+services:
+  - docker
+
+before_install:
+  - docker build -t travistest .
+  - docker run -d -p 5000:8080 travistest
+  - docker ps -a
