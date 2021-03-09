@@ -3,11 +3,11 @@ const app = express()
 const port = 8080
 
 app.get('/', (req, res) => {
-  res.send('Hello from my node app!')
+  res.send('Hello from server!')
 })
 
 app.post('/', (req, res) => {
-    res.send('Wow! You did a POST!')
+    res.send('Wow! You did a POST')
 })
 
 app.put('/', (req, res) => {
@@ -15,11 +15,10 @@ app.put('/', (req, res) => {
 })
 
 app.delete('/', (req, res) => {
-    res.send('Deleting ...')
+    res.send('DELETE')
 })
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
-
-module.exports = app;
+module.exports = app
